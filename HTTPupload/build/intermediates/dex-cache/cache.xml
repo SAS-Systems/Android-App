@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3_54bf611a9795cb75c4b937d2308f0a85d98da84a.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\libs\httpcore-4.3.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f91b7a4aadc5cf486df6e4634748d7dd7a73f06d">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\httpcore-4.3.3_2f1fdea07b9eafab4ec6591f15dcdda29a28eca6.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\libs\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="f3cf3b25e14d3bca47773e95aa85ea8fefbf8e81">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_78d248757e9ce8bb1d516145ff8463f72d997f7a.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\libs\httpmime-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="66a39a5e37d5da40fdad6176fc24ef4316e74702">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\httpmime-4.3.6_6eb14a0cf61008713a20a74a7224df6eb8386d3b.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-21.0.3_71300343f4d0c778faa0e53eea190e4909b2cc75.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\.gradle\caches\modules-2\files-2.1\com.loopj.android\android-async-http\1.4.9\386a4339ffe52d5d63e80f9bed8d2b1d1a418249\android-async-http-1.4.9.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.9_f2a46ac3dca160bd9960193d0d9ee4a261657e33.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\.gradle\caches\modules-2\files-2.1\cz.msebera.android\httpclient\4.3.6\526a9f794eab830eae4f23a62c572878b3f491ab\httpclient-4.3.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\httpclient-4.3.6_7d8603ce5933ab0475d9430d14c7f71fc7c41b06.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3_48508439906c2f47acf8f3b04c91f96cded31b0a.jar" />
+    </item>
+    <item
+        jar="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\D062403\Documents\DHBW\SE\App_connection_test\VideoUploadTest\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-21.0.3_16430af414dd45d195f0238f157bb2ef7944d05c.jar" />
+    </item>
+
+</items>

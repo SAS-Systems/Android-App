@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_sync_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\drawable-v21\\ic_sync_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_sync_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\src\\main\\res\\drawable-v21\\ic_sync_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_info_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\src\\main\\res\\drawable-v21\\ic_info_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_info_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\drawable-v21\\ic_info_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_notifications_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\drawable-v21\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_notifications_black_24dp.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\Android-App\\HTTPupload\\app\\src\\main\\res\\drawable-v21\\ic_notifications_black_24dp.xml"
+    }
+]

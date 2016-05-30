@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\release\\xml\\pref_video.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\xml\\pref_video.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\release\\xml\\pref_headers.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\release\\xml\\pref_general.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\build\\intermediates\\res\\merged\\release\\xml\\pref_data_sync.xml",
+        "source": "C:\\Users\\D062403\\Documents\\DHBW\\SE\\App_connection_test\\VideoUploadTest\\app\\src\\main\\res\\xml\\pref_data_sync.xml"
+    }
+]
