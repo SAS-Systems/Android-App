@@ -166,6 +166,17 @@ public class UploadActivity extends Activity {
 			HttpClient httpclient = new DefaultHttpClient();
 			HttpPost httppost = new HttpPost(Config.FILE_UPLOAD_URL);
 
+			//check if user is logged in
+			if(Config.UPLOAD_TOKEN.isEmpty()) {
+
+				APIconnector apiConnector = new APIconnector(getApplicationContext());
+				apiConnector.login();
+			}
+
+			//Set Header
+			httppost.addHeader("user", String.valueOf(Config.USER_ID));
+			httppost.addHeader("token", Config.UPLOAD_TOKEN);
+
 			try {
 				AndroidMultiPartEntity entity = new AndroidMultiPartEntity(
 						new ProgressListener() {
@@ -179,7 +190,6 @@ public class UploadActivity extends Activity {
 				File sourceFile = new File(filePath);
 
 				// Extra parameters if you want to pass to server
-				entity.addPart("author", new StringBody((String.valueOf(Config.USER_ID))));
 				entity.addPart("latitude", new StringBody("49.026580"));
 				entity.addPart("longitude", new StringBody("8.384894"));
 				entity.addPart("public", new StringBody("false"));

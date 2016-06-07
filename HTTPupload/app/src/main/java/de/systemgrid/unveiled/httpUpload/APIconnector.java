@@ -39,7 +39,7 @@ public class APIconnector {
         params.put("username", username);
         params.put("password", password);
 
-        client.post("user/login", params, new TextHttpResponseHandler() {
+        client.post("app/user/login", params, new TextHttpResponseHandler() {
 
             @Override
             public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString, Throwable throwable) {
@@ -56,7 +56,9 @@ public class APIconnector {
                     if(statusCode == 200 && obj.getInt("error") == 0) {
 
                         loginSuccessful();
-                        loadUserdata();
+
+                        Config.USER_ID = obj.getInt("userId");
+                        Config.UPLOAD_TOKEN = obj.getString("uploadToken");
 
                         Log.v("login", String.valueOf(obj.getInt("error")));
 
@@ -75,40 +77,6 @@ public class APIconnector {
         });
 
         return false;
-    }
-
-    public boolean loadUserdata() {
-
-        client.get("user/me", null, new TextHttpResponseHandler() {
-
-            @Override
-            public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString, Throwable throwable) {
-
-                //failded
-            }
-
-            @Override
-            public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, String responseString) {
-
-                try {
-                    JSONObject obj = new JSONObject(responseString);
-
-                    JSONObject userdata = obj.getJSONObject("userData");
-                    Config.USER_ID = userdata.getInt("id");
-
-                    Log.v("userid", String.valueOf(Config.USER_ID));
-
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                } finally {
-
-                    //failded
-                }
-            }
-        });
-
-        return true;
     }
 
     public void loginSuccessful() {

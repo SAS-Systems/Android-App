@@ -11,4 +11,5 @@ public class Config {
     public static final String IMAGE_DIRECTORY_NAME = "unveiled";
 
 	public static int USER_ID = -1;
+	public static String UPLOAD_TOKEN = "";
 }
