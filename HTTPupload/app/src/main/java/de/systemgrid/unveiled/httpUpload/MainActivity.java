@@ -29,13 +29,14 @@ public class MainActivity extends Activity {
     // Camera activity request codes
     private static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
     private static final int CAMERA_CAPTURE_VIDEO_REQUEST_CODE = 200;
+    private static final int CAMERA_CAPTURE_GALLERY_PICKER_CODE = 300;
     
     public static final int MEDIA_TYPE_IMAGE = 1;
     public static final int MEDIA_TYPE_VIDEO = 2;
  
     private Uri fileUri; // file url to store image/video
     
-    private Button btnCapturePicture, btnRecordVideo;
+    private Button btnCapturePicture, btnRecordVideo, btnGalleryPicker;
  
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
  
         btnCapturePicture = (Button) findViewById(R.id.btnCapturePicture);
         btnRecordVideo = (Button) findViewById(R.id.btnRecordVideo);
+        btnGalleryPicker = (Button) findViewById(R.id.btnGalleryPicker);
  
         /**
          * Capture image button click event
@@ -62,10 +64,22 @@ public class MainActivity extends Activity {
         });
  
         /**
+         * Gallery picker button click event
+         */
+        btnGalleryPicker.setOnClickListener(new View.OnClickListener() {
+ 
+            @Override
+            public void onClick(View v) {
+                // gallery picker
+                galleryPicker();
+            }
+        });
+
+        /**
          * Record video button click event
          */
         btnRecordVideo.setOnClickListener(new View.OnClickListener() {
- 
+
             @Override
             public void onClick(View v) {
                 // record video
@@ -142,17 +156,33 @@ public class MainActivity extends Activity {
      */
     private void recordVideo() {
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
- 
+
         fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
- 
+
         // set video quality
         intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1);
- 
+
         intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri); // set the image file
-                                                            // name
- 
+        // name
+
         // start the video capture Intent
         startActivityForResult(intent, CAMERA_CAPTURE_VIDEO_REQUEST_CODE);
+    }
+
+    /**
+     * Launching camera app to gallery picker
+     */
+    private void galleryPicker() {
+
+        Intent intent = new Intent();
+
+        fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
+
+        intent.setType("video/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+
+        // start the video capture Intent
+        startActivityForResult(Intent.createChooser(intent, "Select Video"), CAMERA_CAPTURE_GALLERY_PICKER_CODE);
     }
  
     /**
@@ -224,6 +254,26 @@ public class MainActivity extends Activity {
                 // failed to record video
                 Toast.makeText(getApplicationContext(),
                         "Sorry! Failed to record video", Toast.LENGTH_SHORT)
+                        .show();
+            }
+        } else if (requestCode == CAMERA_CAPTURE_GALLERY_PICKER_CODE) {
+            if (resultCode == RESULT_OK) {
+
+                // video successfully recorded
+                // launching upload activity
+                launchUploadActivity(false);
+
+            } else if (resultCode == RESULT_CANCELED) {
+
+                // user cancelled recording
+                Toast.makeText(getApplicationContext(),
+                        "User cancelled video picking", Toast.LENGTH_SHORT)
+                        .show();
+
+            } else {
+                // failed to record video
+                Toast.makeText(getApplicationContext(),
+                        "Sorry! Failed to pick video", Toast.LENGTH_SHORT)
                         .show();
             }
         }

@@ -2266,7 +2266,7 @@
         <item>3 hours</item>
         <item>6 hours</item>
         <item>Never</item>
-    </string-array><string name="pref_title_server_port">Server Port</string><string name="pref_title_picture_save">Local speichern</string><string-array name="pref_sync_frequency_values">
+    </string-array><string name="btnGalleryPicker">Gallery</string><string name="pref_title_server_port">Server Port</string><string name="pref_title_picture_save">Local speichern</string><string-array name="pref_sync_frequency_values">
         <item>15</item>
         <item>30</item>
         <item>60</item>

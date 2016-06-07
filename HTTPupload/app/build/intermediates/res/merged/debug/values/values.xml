@@ -194,6 +194,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Einstellung</string>
     <string name="app_name">Unveiled</string>
+    <string name="btnGalleryPicker">Gallery</string>
     <string name="btnRecordVideo">Video aufnehmen</string>
     <string name="btnTakePicture">Foto aufnehmen</string>
     <string name="btnUploadToServer">Auf den Server laden</string>

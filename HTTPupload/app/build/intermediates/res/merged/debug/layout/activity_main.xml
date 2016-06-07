@@ -46,6 +46,25 @@
             android:paddingRight="20dp"
             android:text="@string/btnRecordVideo"
             android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/or"
+            android:textColor="@color/txt_font"
+            android:id="@+id/textView" />
+
+        <Button
+            android:id="@+id/btnGalleryPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/btnGalleryPicker"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>
