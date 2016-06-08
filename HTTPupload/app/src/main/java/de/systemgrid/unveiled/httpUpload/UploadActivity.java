@@ -17,8 +17,10 @@ import org.apache.http.util.EntityUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -166,16 +168,15 @@ public class UploadActivity extends Activity {
 			HttpClient httpclient = new DefaultHttpClient();
 			HttpPost httppost = new HttpPost(Config.FILE_UPLOAD_URL);
 
-			//check if user is logged in
-			if(Config.UPLOAD_TOKEN.isEmpty()) {
+			SharedPreferences sharedPref = getApplication().getSharedPreferences("login.pref", Context.MODE_PRIVATE);
+			String uploadToken = sharedPref.getString("UPLOAD_TOKEN", "");
+			int userID = sharedPref.getInt("USER_ID", 0);
 
-				APIconnector apiConnector = new APIconnector(getApplicationContext());
-				apiConnector.login();
-			}
+			Log.v("uploadToken", uploadToken);
 
 			//Set Header
-			httppost.addHeader("user", String.valueOf(Config.USER_ID));
-			httppost.addHeader("token", Config.UPLOAD_TOKEN);
+			httppost.addHeader("user", String.valueOf(userID));
+			httppost.addHeader("token", uploadToken);
 
 			try {
 				AndroidMultiPartEntity entity = new AndroidMultiPartEntity(

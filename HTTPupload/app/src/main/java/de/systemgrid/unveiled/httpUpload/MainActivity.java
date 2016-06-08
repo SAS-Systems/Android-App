@@ -8,6 +8,7 @@ import java.util.Locale;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -174,15 +175,10 @@ public class MainActivity extends Activity {
      */
     private void galleryPicker() {
 
-        Intent intent = new Intent();
-
-        fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);
-
-        intent.setType("video/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Video.Media.EXTERNAL_CONTENT_URI);
 
         // start the video capture Intent
-        startActivityForResult(Intent.createChooser(intent, "Select Video"), CAMERA_CAPTURE_GALLERY_PICKER_CODE);
+        startActivityForResult(intent, CAMERA_CAPTURE_GALLERY_PICKER_CODE);
     }
  
     /**
@@ -259,9 +255,12 @@ public class MainActivity extends Activity {
         } else if (requestCode == CAMERA_CAPTURE_GALLERY_PICKER_CODE) {
             if (resultCode == RESULT_OK) {
 
-                // video successfully recorded
+                Uri selectedImageURI = data.getData();
+                String path = getRealPathFromURI(selectedImageURI);
+
                 // launching upload activity
-                launchUploadActivity(false);
+                launchUploadActivity(false, path);
+
 
             } else if (resultCode == RESULT_CANCELED) {
 
@@ -282,6 +281,13 @@ public class MainActivity extends Activity {
     private void launchUploadActivity(boolean isImage){
     	Intent i = new Intent(MainActivity.this, UploadActivity.class);
         i.putExtra("filePath", fileUri.getPath());
+        i.putExtra("isImage", isImage);
+        startActivity(i);
+    }
+
+    private void launchUploadActivity(boolean isImage, String path){
+        Intent i = new Intent(MainActivity.this, UploadActivity.class);
+        i.putExtra("filePath", path);
         i.putExtra("isImage", isImage);
         startActivity(i);
     }
@@ -332,5 +338,19 @@ public class MainActivity extends Activity {
         }
  
         return mediaFile;
+    }
+
+    private String getRealPathFromURI(Uri contentURI) {
+        String result;
+        Cursor cursor = getContentResolver().query(contentURI, null, null, null, null);
+        if (cursor == null) { // Source is Dropbox or other similar local file path
+            result = contentURI.getPath();
+        } else {
+            cursor.moveToFirst();
+            int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+            result = cursor.getString(idx);
+            cursor.close();
+        }
+        return result;
     }
 }

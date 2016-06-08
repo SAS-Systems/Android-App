@@ -19,11 +19,13 @@ public class APIconnector {
 
     private Context context = null;
     private APIclient client;
+    private SharedPreferences sharedPref;
 
     public APIconnector(Context context) {
 
         this.context = context;
         this.client = new APIclient(context);
+        this.sharedPref = context.getSharedPreferences("login.pref", Context.MODE_PRIVATE);
     }
 
     @SuppressWarnings("deprecation")
@@ -57,8 +59,13 @@ public class APIconnector {
 
                         loginSuccessful();
 
-                        Config.USER_ID = obj.getInt("userId");
-                        Config.UPLOAD_TOKEN = obj.getString("uploadToken");
+                        //Config.USER_ID = obj.getInt("userId");
+                        //Config.UPLOAD_TOKEN = obj.getString("uploadToken");
+
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        editor.putInt("USER_ID", obj.getInt("userId"));
+                        editor.putString("UPLOAD_TOKEN", obj.getString("uploadToken"));
+                        editor.commit();
 
                         Log.v("login", String.valueOf(obj.getInt("error")));
 
