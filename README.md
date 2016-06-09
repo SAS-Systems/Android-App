@@ -19,6 +19,6 @@ Accept the popup to install and click on `open` to install the app.
 ### Login with your credentials
 Click on the top right button and choose `Einstellungen`. The click on the category `Server-Verbindung`. Type in your `Account Username` and `Account Passwort`. If everything is correct a toast confirm your login. Now you are able to use our app.
 
-### Use the App
+## Use the App
 
 In this version you are able to record new videos and save it on the server or upload old video from the gallery. You can login on the Website an see all videos you have taken and download or delete them. If you want to change your password or the anything else you could do that an the web interface, too.
